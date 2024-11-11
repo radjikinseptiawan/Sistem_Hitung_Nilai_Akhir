@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flowchart"/>
+        <attribute name="authors" value="TOSHIBA R73"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-11 05:36:45 PM"/>
+        <attribute name="created" value="VE9TSElCQSBSNzM7REVTS1RPUC0zRUdMQk1HOzIwMjQtMTEtMTE7MDU6MjI6MTMgUE07MzA3NQ=="/>
+        <attribute name="edited" value="VE9TSElCQSBSNzM7REVTS1RPUC0zRUdMQk1HOzIwMjQtMTEtMTE7MDU6MzY6NDUgUE07MTszMTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mahasiswa" type="String" array="True" size="10"/>
+            <declare name="no" type="Integer" array="False" size=""/>
+            <assign variable="no" expression="0"/>
+            <while expression="no &lt; 10">
+                <output expression="&quot;Masukkan Nama : &quot;" newline="True"/>
+                <declare name="nama" type="String" array="False" size=""/>
+                <input variable="nama"/>
+                <output expression="&quot;Masukkan NIM&quot;" newline="True"/>
+                <declare name="nomorIndukMahasiswa" type="String" array="False" size=""/>
+                <input variable="nomorIndukMahasiswa"/>
+                <output expression="&quot;Masukkan Nilai Tugas&quot;" newline="True"/>
+                <declare name="nilaiTugas" type="Integer" array="False" size=""/>
+                <input variable="nilaiTugas"/>
+                <output expression="&quot;Masukkan Nilai UTS&quot;" newline="True"/>
+                <declare name="nilaiUTS" type="Integer" array="False" size=""/>
+                <input variable="nilaiUTS"/>
+                <output expression="&quot;Masukkan nilai UAS&quot;" newline="True"/>
+                <declare name="nilaiUAS" type="Integer" array="False" size=""/>
+                <input variable="nilaiUAS"/>
+                <assign variable="no" expression="no + 1"/>
+                <declare name="nilaiAkhir" type="Integer" array="False" size=""/>
+                <assign variable="nilaiAkhir" expression="nilaiTugas * 0.3 + nilaiUAS * 0.35 + nilaiUTS * 0.35"/>
+                <output expression="&quot;Tambahkan ke Array Mahasiswa ?&quot;" newline="True"/>
+                <declare name="choose" type="String" array="False" size=""/>
+                <input variable="choose"/>
+                <if expression="choose == &quot;yes&quot;">
+                    <then>
+                        <output expression="&quot;==================================================&quot;" newline="True"/>
+                        <output expression="&quot;Data di tambahkan ke variabel mahasiswa&quot;" newline="True"/>
+                        <output expression="&quot;==================================================&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;==================================================&quot;" newline="True"/>
+                        <output expression="&quot;| no | Nama | NIM | Nilai Tugas | UTS | UAS | Nilai Akhir|&quot;" newline="True"/>
+                        <output expression="&quot;==================================================&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
